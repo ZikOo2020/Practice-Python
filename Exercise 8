@@ -1,0 +1,26 @@
+player_1 = 0
+player_2 = 0
+start = str(input("PLease Insert S to begin or Q to quit"))
+while(start=="S" or start == "s"):
+    show_1=int(input("first player please choose what you: Rock=1,Paper=2,Scissors=3 "))
+    show_2=int(input("Second player please choose what you: Rock=1,Paper=2,Scissors=3 "))
+    if show_1>3 or show_1<1 or show_2>3 or show_2<1:
+        print("Wrong Value - please insert Values just 1 or 2 or 3 ")
+    else:
+        if show_1 ==show_2:
+            print(str(show_1) + " Draw " + str(show_2) )
+            player_1 = show_1
+            player_2 = show_2
+        elif show_1>show_2:
+            print("First Player won " + str(show_1) + " > " + str(show_2) )
+            player_1 = show_1
+            player_2 = show_2
+        else:
+            print("Second player won " + str(show_2) + " > " + str(show_1))
+            player_1 = show_1
+            player_2 = show_2
+    start = str(input("PLease Insert S to begin again or Q to quit"))
+    if start =="Q" or start == "q":
+        break;
+
+print("The Result is: " + str(player_1) + " and " + str(player_2)) 

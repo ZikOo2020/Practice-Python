@@ -1,0 +1,20 @@
+def reverse_it(a):
+    list_check = []
+    for i in range(0,len(a)):
+        list_check.append(a[-1-i])
+    print("The Reverse one is: "+" ".join(list_check))
+    
+
+def insert_talk():
+    list_talk = []
+    talk = ""
+    insert = input("Please insert What you want to see how will bw reverse them: ,  and if you want to go out , just insert 0 \n ")
+    if str(insert) == "0":
+        print("Thanks for using" ) 
+    else:
+        talk = insert.split()
+        list_talk = talk
+        print("The orginal one is: "+" ".join(list_talk))
+        reverse_it(list_talk)
+    
+insert_talk()

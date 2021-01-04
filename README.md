@@ -1,6 +1,5 @@
 #List_Remove_Duplicates
 #Exercise_14
-
 def insert_list():
     list_org = []
     flag = True
@@ -14,7 +13,6 @@ def insert_list():
             list_org.append(insert)
     print(list_org)
     check_list(list_org)
-
 
 def check_list(a): 
     list_new= a

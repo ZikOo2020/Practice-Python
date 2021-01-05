@@ -1,0 +1,35 @@
+import random
+
+show = print("You have just 3 tries , choice carefully , good luck ;) ")
+number = random.randint(1,9)
+list_choice = []
+flag =3
+while flag!=0:
+  insert = int(input("PLease insert your choice between 1 and 9: "))
+  if insert <1:
+    print("Worng Value , try again please: ")
+    list_choice.append(insert)
+    flag-=1
+  else:
+    if number == insert:
+      print("Your choice was correct and the number was: "+str(insert))
+      list_choice.append(insert)
+      number = random.randint(1,9)
+      flag=3
+    elif number > insert:
+      print("Your choice is smaller than the number , please try again: ")
+      list_choice.append(insert)
+      flag-=1
+    else:
+      print("Your choice is bigger than the number , please try again: ")
+      list_choice.append(insert)
+      flag-=1
+
+for n in range(0,len(list_choice)):
+  if number not in list_choice:
+    print("ooooooooh none of your choices were correct :( ")
+    break
+  else:
+    break
+print("The Random Number was: " + str(number))
+print("Your choices were: "+str(list_choice))

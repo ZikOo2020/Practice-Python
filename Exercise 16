@@ -1,0 +1,15 @@
+#Password Generator
+from random import randint
+insert = int(input("Please insert The length number of password: "))
+list_pass= []
+
+while len(list_pass)<insert:
+    unknown = randint(33,127)
+    list_pass.append(unknown)
+print(list_pass)
+list_new =[]
+for i in range(0,len(list_pass)):
+    new_pass = chr(list_pass[i]) 
+    list_new.append(new_pass)
+print(list_new)   
+print("The password is:"+"".join(list_new))
